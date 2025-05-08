@@ -8,7 +8,7 @@ namespace BingoBanko
 {
 	class User
 	{
-		Plate Jasmin = new Plate();
+		Plate Jasmin1 = new Plate();
 		Plate Jasmin2 = new Plate();
 		Plate Jasmin3 = new Plate();
 		Plate Jasmin4 = new Plate();
@@ -20,22 +20,22 @@ namespace BingoBanko
 		// Use printlist method in here
 		public List<int> UserPlate(string input)
 		{
-			Jasmin.ID = "Jasmin";
+			Jasmin1.ID = "Jasmin1";
 			Jasmin2.ID = "Jasmin2";
 			Jasmin3.ID = "Jasmin3";
 			Jasmin4.ID = "Jasmin4";
 			Jasmin5.ID = "Jasmin5";
 
 			// first plate
-			Jasmin.firstRow = new List<int>()
+			Jasmin1.firstRow = new List<int>()
 							{
 								33, 42, 60, 74, 80
 							};
-			Jasmin.secondRow = new List<int>()
+			Jasmin1.secondRow = new List<int>()
 							{
 								7, 22, 54, 68, 78
 							};
-			Jasmin.thirdRow = new List<int>()
+			Jasmin1.thirdRow = new List<int>()
 							{
 								8, 18, 39, 58, 87
 							};
@@ -116,7 +116,7 @@ namespace BingoBanko
 			//fifthIdJasmin.AddRange(Jasmin5.secondRow);
 			//fifthIdJasmin.AddRange(Jasmin5.thirdRow);
 
-			Plates.Add(Jasmin);
+			Plates.Add(Jasmin1);
 			Plates.Add(Jasmin2);
 			Plates.Add(Jasmin3);
 			Plates.Add(Jasmin4);
@@ -137,10 +137,19 @@ namespace BingoBanko
 		}
 		public void PrintPlate()
 		{
-			PrintSinglePlate(Jasmin);
+			Console.WriteLine(Jasmin1.ID);
+			PrintSinglePlate(Jasmin1);
+
+			Console.WriteLine(Jasmin2.ID);
 			PrintSinglePlate(Jasmin2);
+
+			Console.WriteLine(Jasmin3.ID);
 			PrintSinglePlate(Jasmin3);
+
+			Console.WriteLine(Jasmin4.ID);
 			PrintSinglePlate(Jasmin4);
+
+			Console.WriteLine(Jasmin5.ID);
 			PrintSinglePlate(Jasmin5);
 		}
 	}

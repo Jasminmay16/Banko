@@ -23,10 +23,8 @@ namespace BingoBanko
 				Console.WriteLine("List is null");
 				return;
 			}
-
 			foreach (int i in list)
 			{
-
 				Console.Write(i + " ");
 			}
 			Console.WriteLine(rowSeparator);
@@ -57,7 +55,7 @@ namespace BingoBanko
 
 		public void CheckForBingoOnTwoRows(int inputNumber, List<string> bingoMessage)
 		{
-			
+
 			this.firstRow.Remove(inputNumber);
 			this.secondRow.Remove(inputNumber);
 			this.thirdRow.Remove(inputNumber);

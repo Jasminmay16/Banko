@@ -4,33 +4,34 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace BingoBanko
 {
-    internal class Program
-    {
+	internal class Program
+	{
 
-        static void Main(string[] args)
-        {
-			Plate plate = new Plate();	
+		static void Main(string[] args)
+		{
+			Plate plate = new Plate();
 			User user = new User();
 			List<string> bingoMessages = new List<string>();
 
-			plate.ID = "Jasmin";
 			bool gameOver = true;
 
 			while (gameOver)
-            {
+			{
 				Console.SetCursorPosition(0, 0);
 
 				Console.WriteLine($"Player name:");
-                string inputName = Console.ReadLine();
-				if (inputName == plate.ID)
+				string inputName = Console.ReadLine();
+
+				if (inputName == "Jasmin")
 				{
 					user.UserPlate(inputName);
 
 					bool checkNumber = false;
-					
+
 					while (!checkNumber)
-                    {
+					{
 						Console.Clear();
+						Thread.Sleep(1000);
 						Console.SetCursorPosition(0, 0);
 						user.PrintPlate();
 
@@ -50,7 +51,7 @@ namespace BingoBanko
 					}
 				}
 			}
-        }
+		}
 
 		static bool CheckForNumberInList(List<int> list, int inputNumber)
 		{
