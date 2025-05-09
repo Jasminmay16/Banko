@@ -16,8 +16,6 @@ namespace BingoBanko
 
 		public List<Plate> Plates = new List<Plate>();
 
-
-		// Use printlist method in here
 		public List<int> UserPlate(string input)
 		{
 			Jasmin1.ID = "Jasmin1";
@@ -116,16 +114,18 @@ namespace BingoBanko
 			//fifthIdJasmin.AddRange(Jasmin5.secondRow);
 			//fifthIdJasmin.AddRange(Jasmin5.thirdRow);
 
+			// Add the plates to the list
 			Plates.Add(Jasmin1);
 			Plates.Add(Jasmin2);
 			Plates.Add(Jasmin3);
 			Plates.Add(Jasmin4);
 			Plates.Add(Jasmin5);
 
-			// Return an empty list to satisfy the method's return type
+			// Return a list of integers
 			return new List<int>();
 		}
 
+		// Method to print a single plate
 		public void PrintSinglePlate(Plate plate)
 		{
 			string rowSeparator = "";
@@ -135,6 +135,8 @@ namespace BingoBanko
 			plate.PrintList(plate.thirdRow, rowSeparator);
 			Console.WriteLine("--------------");
 		}
+		// Method to print all plates
+		// This method also prints the ID and the rows of each plate
 		public void PrintPlate()
 		{
 			Console.WriteLine(Jasmin1.ID);

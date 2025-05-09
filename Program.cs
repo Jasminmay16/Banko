@@ -9,14 +9,17 @@ namespace BingoBanko
 
 		static void Main(string[] args)
 		{
+			//Instantiate the plate and user objects
 			Plate plate = new Plate();
 			User user = new User();
+
+			//Create a list to store bingo messages
 			List<string> bingoMessages = new List<string>();
 
-			bool gameOver = true;
-
-			while (gameOver)
+			bool Game = true;
+			while (Game)
 			{
+				//Set the console cursor position to the top left corner
 				Console.SetCursorPosition(0, 0);
 
 				Console.WriteLine($"Player name:");
@@ -24,22 +27,26 @@ namespace BingoBanko
 
 				if (inputName == "Jasmin")
 				{
+					//Create a plate for the user
 					user.UserPlate(inputName);
 
 					bool checkNumber = false;
-
 					while (!checkNumber)
 					{
+
 						Console.Clear();
-						Thread.Sleep(1000);
 						Console.SetCursorPosition(0, 0);
 						user.PrintPlate();
 
-						foreach (var i in bingoMessages)
+						//Print the bingo messages
+						foreach (var index in bingoMessages)
 						{
-							Console.WriteLine(i);
+							Console.WriteLine(index);
 						}
 
+						//Prompt the user to enter a number to check if it's on the plate
+						//If the number is on the plate, remove it from the list
+						//and check for bingo
 						Console.WriteLine("Enter a number to check if it's on the plate:");
 						int inputNumber = Convert.ToInt32(Console.ReadLine());
 						foreach (Plate i in user.Plates)
