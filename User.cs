@@ -16,7 +16,7 @@ namespace BingoBanko
 
 		public List<Plate> Plates = new List<Plate>();
 
-		public List<int> UserPlate(string input)
+		public void UserPlate(string input)
 		{
 			Jasmin1.ID = "Jasmin1";
 			Jasmin2.ID = "Jasmin2";
@@ -122,7 +122,7 @@ namespace BingoBanko
 			Plates.Add(Jasmin5);
 
 			// Return a list of integers
-			return new List<int>();
+			
 		}
 
 		// Method to print a single plate
